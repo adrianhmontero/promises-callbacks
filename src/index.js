@@ -1,6 +1,8 @@
-import { greet } from "./js/functions";
+import { searchHero } from "./js/callbacks";
 import "./styles.css";
 
-const name = "Adrián";
-
-greet(name);
+const heroId = "spiderMan";
+searchHero(heroId, (err, hero) => {
+  if (err) console.error(err);
+  else console.info({ hero });
+});
